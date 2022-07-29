@@ -1,0 +1,32 @@
+package fundamentos.exercicios;
+
+import javax.swing.JOptionPane;
+
+public class Bhaskara {
+
+	public static void main(String[] args) {
+
+		JOptionPane.showMessageDialog(null, "Equação: ax² + bx + c = 0");
+		
+		String valor1 = JOptionPane.showInputDialog("Informe o valor de a: ");
+		String valor2 = JOptionPane.showInputDialog("Informe o valor de a: ");
+		String valor3 = JOptionPane.showInputDialog("Informe o valor de a: ");
+		
+		int a = Integer.parseInt(valor1);
+		int b = Integer.parseInt(valor2);
+		int c = Integer.parseInt(valor3);
+		
+		int delta = (b * b) - (4 * a * c);
+		
+		double x1 = (-b + Math.sqrt(delta)) / (2 * a);
+		double x2 = (-b - Math.sqrt(delta)) / (2 * a);
+		
+		JOptionPane.showMessageDialog(null, String.format("O delta da equação"
+				+ " %dx² + %dx + %d = 0 é: ", a, b, c, delta));
+		JOptionPane.showMessageDialog(null, String.format("O X1 da equação"
+				+ " %dx² + %dx + %d = 0 é: %.2f", a, b, c, x1));
+		JOptionPane.showMessageDialog(null, String.format("O X2 da equação"
+				+ " %dx² + %dx + %d = 0 é: %.2f", a, b, c, x2));
+	}
+
+}

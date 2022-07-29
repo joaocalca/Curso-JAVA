@@ -1,0 +1,36 @@
+package fundamentos.operadores;
+
+public class DesafioLogicos {
+
+	public static void main(String[] args) {
+		
+		// Trabalho na terça (V ou F)
+		// Trabalho na quinta (V ou F)
+		
+		/*
+		 *  TT && TQ = true (televisão de 50 polegadas)
+		 *  TT || TQ = true (televisão de 32 polegadas)
+		 *  TV50 || TV32 = true (tomar sorvete)
+		 *  TT && TQ = false (ficaram em casa)
+		 *  Nao tomou sorvete = + saudavel ou ficou com fome
+		 */
+		
+		boolean TrabalhoT = true;
+		boolean TrabalhoQ = false;
+		
+		boolean Tv50 = TrabalhoT && TrabalhoQ;
+		System.out.println("Comprou Tv de 50 polegadas? " + Tv50);
+		
+		boolean Tv32 = TrabalhoT ^ TrabalhoQ;
+		System.out.println("Comprou Tv de 32 polegadas? " + Tv32);
+		
+		boolean sorvete = Tv50 || Tv32;
+		System.out.println("Tomou sorvete? " + sorvete);
+		boolean SemSorvete = !sorvete;
+		System.out.println("Ficou mais saudavel e sem sorte? " + SemSorvete);
+		
+		boolean EmCasa = !Tv32 && !Tv50;
+		System.out.println("Ficou em casa? " + EmCasa);
+		
+	}
+}

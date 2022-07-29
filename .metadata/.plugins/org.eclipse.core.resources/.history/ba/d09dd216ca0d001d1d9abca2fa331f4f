@@ -1,0 +1,26 @@
+package fundamentos;
+
+public class DesafioAritmeticos {
+
+	public static void main(String[] args) {
+		
+		int primeira_parte = (6 * (2 + 3));
+		int segunda_parte = (1 - 5) * (2 - 7) / 2;
+		
+		int primeira_potencia = (int) Math.pow(primeira_parte, 2);
+		int resultado_primeira = primeira_potencia / (3 * 2);
+		
+		int segunda_potencia = (int) Math.pow(segunda_parte, 2);
+		int resultado_segunda = segunda_potencia;
+		
+		int terceira_parte = resultado_primeira - resultado_segunda;
+		int resultado_terceira = (int) Math.pow(terceira_parte, 3);
+		
+		int quarta_parte = (int) Math.pow(10, 3);
+		int resultado_quarta = quarta_parte;
+		
+		int resultado_final = resultado_terceira / resultado_quarta;
+		
+		System.out.println(resultado_final);
+	}
+}
